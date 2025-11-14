@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class MissingNumberFinder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read n
+        int n = sc.nextInt();
+
+        // Read the array of n numbers
+        int[] arr = new int[n];
+        long actualSum = 0;
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            actualSum += arr[i];
+        }
+
+        // Expected sum of numbers from 1 to n+1
+        long expectedSum = (long)(n + 1) * (n + 2) / 2;
+
+        // Missing number
+        long missing = expectedSum - actualSum;
+        System.out.println(missing);
+
+        sc.close();
+    }
+}
