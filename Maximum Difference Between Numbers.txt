@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class MaximumDifference {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read n
+        int n = sc.nextInt();
+
+        // Initialize min and max with extreme values
+        int minVal = Integer.MAX_VALUE;
+        int maxVal = Integer.MIN_VALUE;
+
+        // Read array elements and track min & max
+        for (int i = 0; i < n; i++) {
+            int num = sc.nextInt();
+            if (num < minVal) {
+                minVal = num;
+            }
+            if (num > maxVal) {
+                maxVal = num;
+            }
+        }
+
+        // Compute maximum difference
+        int difference = maxVal - minVal;
+
+        // Print result
+        System.out.println(difference);
+
+        sc.close();
+    }
+}
